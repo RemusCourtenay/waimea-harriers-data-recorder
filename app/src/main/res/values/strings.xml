@@ -24,6 +24,7 @@
     <string name="sign_out">Sign Out</string>
     <string name="disconnect">Disconnect</string>
     <string name="refresh_token">Get Fresh Token</string>
+    <string name="go_to_input_data_button_text">Input Data</string>
 
     <!-- Content Description for images -->
     <string name="desc_google_icon">Google Logo</string>
@@ -53,4 +54,14 @@
     <!-- Server Client ID.  This should be a valid Web OAuth 2.0 Client ID obtained
          from https://console.developers.google.com/ -->
     <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
+
+    <!-- Activity Headers -->
+    <string name="input_data_header_text">Input Data</string>
+
+    <!-- Hints -->
+    <string name="input_data_choose_number_hint">Choose a row number</string>
+
+    <!-- Tags -->
+    <string name="input_data_name_tag">Name: </string>
+    <string name="input_data_competitor_type_tag">Competitor Type: </string>
 </resources>

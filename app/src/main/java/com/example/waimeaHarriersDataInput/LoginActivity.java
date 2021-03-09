@@ -2,6 +2,7 @@ package com.example.waimeaHarriersDataInput;
 
 import android.accounts.Account;
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -74,7 +76,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView mStatusTextView;
     private TextView mDetailTextView;
     private ProgressDialog mProgressDialog;
-
+    private Button mGoToInputDataButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,6 +103,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
+        findViewById(R.id.go_to_input_data_button).setOnClickListener(this);
 
         // For this example we don't need the disconnect button
         findViewById(R.id.disconnect_button).setVisibility(View.GONE);
@@ -213,7 +216,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.sign_out_button:
                 signOut();
                 break;
+            case R.id.go_to_input_data_button:
+                goTo(InputDataActivity.class);
         }
+    }
+
+    private void goTo(Class<? extends Activity> nextActivity) {
+        Intent goToIntent = new Intent(this, nextActivity);
+        goToIntent.putExtra("UserAccount", mAccount);
+        startActivity(goToIntent);
     }
 
     protected void onConnectionsLoadFinished(Integer index) {
