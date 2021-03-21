@@ -25,6 +25,9 @@
     <string name="disconnect">Disconnect</string>
     <string name="refresh_token">Get Fresh Token</string>
     <string name="go_to_input_data_button_text">Input Data</string>
+    <string name="go_to_menu_button_text">Menu</string>
+    <string name="go_to_results_button_text">Results</string>
+    <string name="input_data_submit_button_text">Submit</string>
 
     <!-- Content Description for images -->
     <string name="desc_google_icon">Google Logo</string>
@@ -62,6 +65,16 @@
     <string name="input_data_choose_number_hint">Choose a row number</string>
 
     <!-- Tags -->
+    <string name="input_data_bib_number_tag">Bib Number: </string>
     <string name="input_data_name_tag">Name: </string>
     <string name="input_data_competitor_type_tag">Competitor Type: </string>
+    <string name="input_data_own_time_tag">Own Time: </string>
+
+    <!-- Spinner Values -->
+    <string-array name="competitor_types">
+        <item></item>
+        <item>ER</item>
+        <item>R</item>
+        <item>W</item>
+    </string-array>
 </resources>
